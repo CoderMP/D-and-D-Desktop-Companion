@@ -10,11 +10,12 @@ using DandD_Desktop_v2.Models;
 using DandD_Desktop_v2.Services;
 
 using Microsoft.Toolkit.Uwp.UI.Controls;
-
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Navigation;
 
 namespace DandD_Desktop_v2.Views
 {
@@ -34,6 +35,12 @@ namespace DandD_Desktop_v2.Views
         {
             InitializeComponent();
             Loaded += DMConsolePage_Loaded;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SystemNavigationManager navMgr = SystemNavigationManager.GetForCurrentView();
+            navMgr.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
         }
 
         private async void DMConsolePage_Loaded(object sender, RoutedEventArgs e)

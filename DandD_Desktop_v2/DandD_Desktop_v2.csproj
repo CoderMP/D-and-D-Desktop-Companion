@@ -11,7 +11,7 @@
     <AssemblyName>DandD_Desktop_v2</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -259,6 +259,18 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assets\ViewBackgrounds\03_new-to-dnd_races_heroes_her.png" />
+    <Content Include="Assets\ViewBackgrounds\0b4eb2dc4b8b8c66165690d3a6723a9b.jpg" />
+    <Content Include="Assets\ViewBackgrounds\cbdeb20be7680154b9ae6feaa017012e.jpg" />
+    <Content Include="Assets\ViewBackgrounds\dnd-main.jpg" />
+    <Content Include="Assets\ViewBackgrounds\dungeons-and-dragons-wallpaper-HD1-1.jpg" />
+    <Content Include="Assets\ViewBackgrounds\e5d4752e7c7c11082218ed54e586212c.jpg" />
+    <Content Include="Assets\ViewBackgrounds\fire-dragon-wallpapers-desktop-background.jpg" />
+    <Content Include="Assets\ViewBackgrounds\G33Yxbq.jpg" />
+    <Content Include="Assets\ViewBackgrounds\HD-Dungeons-And-Dragons-Photos.jpg" />
+    <Content Include="Assets\ViewBackgrounds\lqFniyN.jpg" />
+    <Content Include="Assets\ViewBackgrounds\Smith.jpg" />
+    <Content Include="Assets\ViewBackgrounds\wallpaper_1920x1080.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

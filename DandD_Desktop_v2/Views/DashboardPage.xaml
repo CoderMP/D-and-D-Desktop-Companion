@@ -9,10 +9,298 @@
     <Grid
         x:Name="ContentArea"
         Margin="{StaticResource MediumLeftRightMargin}">
-        <Grid
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                Place your content here.-->
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/ViewBackgrounds/lqFniyN.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="198*"/>
+                <ColumnDefinition Width="198*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="400*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="62*"/>
+                <RowDefinition Height="62*"/>
+                <RowDefinition Height="62*"/>
+                <RowDefinition Height="110*"/>
+                <RowDefinition Height="117*"/>
+                <RowDefinition Height="129*"/>
+                <RowDefinition Height="132*"/>
+                <RowDefinition Height="43*"/>
+            </Grid.RowDefinitions>
+
+            <!--Player Name Textbox-->
+            <TextBox x:Name="_txtPlayerName" VerticalAlignment="Top" HorizontalAlignment="Left" PlaceholderText="Enter Player Name" Header="Player Name:" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0,0,0" Width="211"/>
+
+            <!--Character Name TextBox-->
+            <TextBox x:Name="_txtCharName" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" PlaceholderText="Enter Character Name" Header="Character Name:" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0.5,0,0" Width="211"/>
+
+            <!--Character Alignment Spinner-->
+            <ComboBox x:Name="_cmbAlignment" VerticalAlignment="Top" HorizontalAlignment="Left" PlaceholderText="Alignment" Header="Character Alignment:" Grid.Row="2" HorizontalContentAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0,0,0" Width="211">
+                <ComboBoxItem Content="Lawful Good" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Neutral Good" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Chaotic Good" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Lawful Neutral" FontFamily="Segoe"/>
+                <ComboBoxItem Content="True Neutral" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Chaotic Neutral" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Lawful Evil" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Neutral Evil" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Chaotic Evil" FontFamily="Segoe"/>
+            </ComboBox>
+
+            <!--Character Class Spinner-->
+            <ComboBox x:Name="_cmbCharClass" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Class" Header="Character Class:" HorizontalContentAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5.5,0,9,0">
+                <ComboBoxItem Content="Barbarian" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Bard" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Blood Hunter" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Cleric" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Druid" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Fighter" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Monk" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Paladin" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Ranger" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Rogue" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Sorcerer" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Warlock" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Wizard" FontFamily="Segoe"/>
+            </ComboBox>
+
+            <!--Character Race Spinner-->
+            <ComboBox x:Name="_cmbCharRace" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Race" Header="Chracter Race" HorizontalContentAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0.5,0.5,9,0">
+                <ComboBoxItem Content="Aarakocra" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Aasimar" FontFamily="Segoe"/>
+                <ComboBoxItem Content="BugBear" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Dragonborn" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Dwarf" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Elf" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Feral Tiefling" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Firbolg" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Genasi" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Gnome" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Goblin" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Goliath" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Half-Elf" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Halfling" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Half-Orc" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Hobgoblin" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Human" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Kenku" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Kobold" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Lizardfolk" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Orc" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Tabaxi" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Tiefling" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Tortle" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Triton" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Yu-Ti Pureblood" FontFamily="Segoe"/>
+            </ComboBox>
+
+            <!--Character Background Spinner-->
+            <ComboBox x:Name="_cmbCharBackground" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Background" Header="Character Background" HorizontalContentAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5.5,0,9,0">
+                <ComboBoxItem Content="Acolyte" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Anthropologist" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Archeologist" FontFamily="Segoe"/>
+                <ComboBoxItem Content="City Watch/Investigator" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Clan Crafter" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Cloistered Scholar" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Courtier" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Criminal" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Entertainer" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Faction Agent" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Far Traveller" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Folk Hero" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Gladiator" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Guild Artisan" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Haunted One" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Hermit" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Inheritor" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Knight" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Knight of the Order" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Mercenary Veteran" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Noble" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Outlander" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Pirate" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Sage" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Sailor" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Soldier" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Urban Bounty Hunter" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Urchin" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Uthgardt Tribe Member" FontFamily="Segoe"/>
+                <ComboBoxItem Content="Waterhavian Noble" FontFamily="Segoe"/>
+            </ComboBox>
+
+            <!--Character Armour Rating Textbox-->
+            <TextBox x:Name="_txtBxArmRating" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" PlaceholderText="AR" Header="Armour Rating" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0,0,10,0" Width="99"/>
+
+            <!--Character Initiative-->
+            <TextBox x:Name="_txtBxInitiative" Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Right" PlaceholderText="+X" Header="Initiative" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0,0,10,0" Width="99"/>
+
+            <!--Character Health (Current)-->
+            <TextBox x:Name="_txtBxCurrHp" Grid.Column="2" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" PlaceholderText="XX" Header="Current HP" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0,0.5,10,0" Width="99"/>
+
+            <!--Character Health (Max)-->
+            <TextBox x:Name="_txtBxMaxHp" Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" PlaceholderText="XX" Header="Max HP" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0,0.5,10,0" Width="99"/>
+
+            <!--Character XP-->
+            <TextBox x:Name="_txtBxXP" Grid.Column="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="+XX" Header="XP" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0,10,0"/>
+
+            <!--Character Level Label-->
+            <Border Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" BorderBrush="#FF7A7A7A" BorderThickness="2" Margin="0,33,0,0" HorizontalAlignment="Center" Width="104">
+                <TextBlock x:Name="_txtCharLevel" FontFamily="Segoe" FontSize="24" Text="Level: 1" TextAlignment="Center" ToolTipService.ToolTip="This is your character's current level (as determined by your current amount of accumulated XP)" RequestedTheme="Dark"/>
+            </Border>
+
+            <!--Character Hit Dice-->
+            <TextBox x:Name="_txtBxHitDice" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Left" PlaceholderText="XDXX" Header="Hit Dice" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0,0,0" Width="99"/>
+
+            <!--Character Speed-->
+            <TextBox x:Name="_txtBxSpeed" Grid.Column="4" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="XXft." Header="Speed" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0.5,9.5,0"/>
+
+            <!--Player Death Roll Successes-->
+            <Grid Grid.Column="5" Margin="0.5,5,455,9.5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!--Header Label-->
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Stretch" FontFamily="Segoe" FontSize="18" Text="Death Save Successes" TextAlignment="Center"/>
+                <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,3,0,0" BorderThickness="2,2,2,2" Width="178">
+                    <StackPanel.BorderBrush>
+                        <SolidColorBrush Color="#FF7A7A7A"/>
+                    </StackPanel.BorderBrush>
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                    </StackPanel.Background>
+
+                    <!--Decrementer-->
+                    <Button x:Name="_btnDSSDecrementer" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE973;" FontSize="24">
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+
+                    <!--Total Death Save Successes-->
+                    <TextBlock x:Name="_txtDSSuccesses" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="30" FontFamily="Segoe" Text="0" TextAlignment="Center" Margin="34,0,35,0"/>
+
+                    <!--Incrementer-->
+                    <Button x:Name="_btnDSSIncrementer" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE974;" FontSize="24">
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!--Player Death Roll Failures-->
+            <Grid Grid.Column="5" Grid.Row="1" Margin="0.5,5,455,9.5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!--Header Label-->
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Stretch" FontFamily="Segoe" FontSize="18" Text="Death Save Failures" TextAlignment="Center"/>
+                <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,3,0,0" BorderThickness="2,2,2,2" Width="178">
+                    <StackPanel.BorderBrush>
+                        <SolidColorBrush Color="#FF7A7A7A"/>
+                    </StackPanel.BorderBrush>
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                    </StackPanel.Background>
+
+                    <!--Decrementer-->
+                    <Button x:Name="_btnDSFDecrementer" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE973;" FontSize="24">
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+
+                    <!--Total Death Save Successes-->
+                    <TextBlock x:Name="_txtDSFailures" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="30" FontFamily="Segoe" Text="0" TextAlignment="Center" Margin="34,0,35,0"/>
+
+                    <!--Incrementer-->
+                    <Button x:Name="_btnDSFIncrementer" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE974;" FontSize="24">
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!--Player Dice Console-->
+            <Grid Grid.Column="6" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,10,10,10" BorderBrush="#FF7A7A7A" BorderThickness="2" CornerRadius="5">
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                </Grid.RowDefinitions>
+
+                <!--Header Label-->
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Stretch" FontFamily="Segoe" FontSize="20" TextAlignment="Center" Text="Player Dice"/>
+                <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,16,0,0" Width="382">
+                    <Button x:Name="_btnRollD4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe" Content="Roll D4" FontSize="18" Margin="15,0,0,0">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="{ThemeResource SystemBaseMediumLowColor}"/>
+                        </Button.BorderBrush>
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="_btnRollD6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe" Content="Roll D4" FontSize="18" Margin="60,0,60,0">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="{ThemeResource SystemBaseMediumLowColor}"/>
+                        </Button.BorderBrush>
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="_btnRollD8" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe" Content="Roll D4" FontSize="18">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="{ThemeResource SystemBaseMediumLowColor}"/>
+                        </Button.BorderBrush>
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,2.5,0,0" Width="382">
+                    <Button x:Name="_btnRollD10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe" Content="Roll D4" FontSize="18" Margin="15,0,0,0">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="{ThemeResource SystemBaseMediumLowColor}"/>
+                        </Button.BorderBrush>
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="_btnRollD12" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe" Content="Roll D4" FontSize="18" Margin="60,0,60,0">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="{ThemeResource SystemBaseMediumLowColor}"/>
+                        </Button.BorderBrush>
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="_btnRollD20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Segoe" Content="Roll D4" FontSize="18">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="{ThemeResource SystemBaseMediumLowColor}"/>
+                        </Button.BorderBrush>
+                        <Button.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltLowColor}"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!--Player Notes Textbox-->
+            <TextBox x:Name="_txtBxPlayerNotes" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="5" TextWrapping="Wrap" Header="Player Notes:" RequestedTheme="Dark" Margin="5,0,10,0" FontSize="18" ScrollViewer.VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
         </Grid>
     </Grid>
 </Page>

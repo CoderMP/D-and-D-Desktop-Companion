@@ -9,10 +9,151 @@
     <Grid
         x:Name="ContentArea"
         Margin="{StaticResource MediumLeftRightMargin}">
-        <Grid
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                Place your content here.-->
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/ViewBackgrounds/cbdeb20be7680154b9ae6feaa017012e.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--TextBox Definition for the Character Equipment-->
+            <TextBox x:Name="textBox" TextWrapping="Wrap" Text="" RequestedTheme="Dark" Header="Equipment:" Margin="0,0,20,0" Grid.RowSpan="2" ScrollViewer.VerticalScrollBarVisibility="Visible" ToolTipService.ToolTip="Your inventory equipment goes here!" FontSize="20" AcceptsReturn="True"/>
+
+            <!--Grid Definition grouping for ammo, resource and charges-->
+            <Grid Grid.Column="1" RequestedTheme="Dark" BorderBrush="#FF7A7A7A" BorderThickness="2" CornerRadius="5" Margin="5,35,20,15">
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160*"/>
+                    <ColumnDefinition Width="163*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="_txtResLabel" TextWrapping="Wrap" Text="Class Resources, Ammo, &amp; Charges" Grid.ColumnSpan="2" TextAlignment="Center" FontSize="20"/>
+
+                <!--TextBox definitions for ammo, resource, or charge entry-->
+                <TextBox x:Name="_txtBxAmmo1" TextWrapping="Wrap" Text="" Grid.Row="1" PlaceholderText="" VerticalAlignment="Center" Height="29" FontSize="18" Margin="5,0,7,0"/>
+                <TextBox x:Name="_txtBxAmmo2" TextWrapping="Wrap" Text="" Grid.Row="2" Height="32" VerticalAlignment="Center" Margin="5,0,7,0"/>
+                <TextBox x:Name="_txtBxAmmo3" TextWrapping="Wrap" Text="" Grid.Row="3" Height="32" VerticalAlignment="Center" Margin="5,0,7,0"/>
+                <TextBox x:Name="_txtBxAmmo4" TextWrapping="Wrap" Text="" Grid.Row="4" Height="32" VerticalAlignment="Center" Margin="5,0,7,0"/>
+                <TextBox x:Name="_txtBxAmmo5" TextWrapping="Wrap" Text="" Grid.Row="5" Height="32" VerticalAlignment="Center" Margin="5,0,7,0"/>
+                <TextBox x:Name="_txtBxAmmo6" TextWrapping="Wrap" Text="" Grid.Row="6" Height="32" VerticalAlignment="Center" Margin="5,0,7,0"/>
+
+                <!--StackPanel groupings of the Ammo/Charge/Resource counters and increment/decrement buttons-->
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                    <RepeatButton x:Name="_btnAmmo1Decrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnAmmoDecrementerClicked"/>
+                    <TextBlock x:Name="_txtAmmo1Count" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnAmmo1Incrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnAmmoIncrementerClicked"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+                    <RepeatButton x:Name="_btnAmmo2Decrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnAmmoDecrementerClicked"/>
+                    <TextBlock x:Name="_txtAmmo2Count" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnAmmo2Incrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnAmmoIncrementerClicked"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+                    <RepeatButton x:Name="_btnAmmo3Decrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnAmmoDecrementerClicked"/>
+                    <TextBlock x:Name="_txtAmmo3Count" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnAmmo3Incrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnAmmoIncrementerClicked"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center">
+                    <RepeatButton x:Name="_btnAmmo4Decrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnAmmoDecrementerClicked"/>
+                    <TextBlock x:Name="_txtAmmo4Count" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnAmmo4Incrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnAmmoIncrementerClicked"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center">
+                    <RepeatButton x:Name="_btnAmmo5Decrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnAmmoDecrementerClicked"/>
+                    <TextBlock x:Name="_txtAmmo5Count" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnAmmo5Incrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnAmmoIncrementerClicked"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="6" HorizontalAlignment="Center">
+                    <RepeatButton x:Name="_btnAmmo6Decrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnAmmoDecrementerClicked"/>
+                    <TextBlock x:Name="_txtAmmo6Count" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnAmmo6Incrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnAmmoIncrementerClicked"/>
+                </StackPanel>
+            </Grid>
+
+            <!--TextBox definition for the Character's Potions and Brews-->
+            <TextBox x:Name="_txtBxPotions" TextWrapping="Wrap" Text="" RequestedTheme="Dark" Header="Potions:" Margin="5,0,24,15" ScrollViewer.VerticalScrollBarVisibility="Visible" ToolTipService.ToolTip="Your Potions and Brews go here!" FontSize="20" Grid.Row="1" Grid.Column="1" AcceptsReturn="True"/>
+
+            <!--Grid definition for Currency-->
+            <Grid Grid.Column="2" RequestedTheme="Dark" Margin="0,35,0,15" BorderThickness="2" CornerRadius="5" BorderBrush="#FF7A7A7A">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130*"/>
+                    <ColumnDefinition Width="127*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="31*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="53*"/>
+                    <RowDefinition Height="59*"/>
+                    <RowDefinition Height="53*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Grid.Background>
+                <TextBlock Text="Currency" FontSize="20" TextAlignment="Center" Grid.ColumnSpan="2"/>
+
+                <!--Currency TextBlock labels-->
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Copper Pieces:" FontSize="18" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="Silver Pieces:" FontSize="18" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="Gold Pieces:" FontSize="18" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                <TextBlock x:Name="textBlock_Copy2" Grid.Row="4" TextWrapping="Wrap" Text="Platinum Pieces:" FontSize="18" VerticalAlignment="Center" Margin="5,0,0,0"/>
+
+                <!--StackPanel groupings for currency total, incrementation, and decrementation-->
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <RepeatButton x:Name="_btnCopperDecrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnCurrencyDecrementerClicked"/>
+                    <TextBlock x:Name="_txtCopperCount" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnCopperIncrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnCurrencyIncrementerClicked"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="10,5,8,0" VerticalAlignment="Center">
+                    <RepeatButton x:Name="_btnSilverDecrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnCurrencyDecrementerClicked"/>
+                    <TextBlock x:Name="_txtSilverCount" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnSilverIncrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnCurrencyIncrementerClicked"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <RepeatButton x:Name="_btnGoldDecrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnCurrencyDecrementerClicked"/>
+                    <TextBlock x:Name="_txtGoldCount" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnGoldIncrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnCurrencyIncrementerClicked"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <RepeatButton x:Name="_btnPlatinumDecrementer" FontFamily="Segoe MDL2 Assets" Content="&#xE76B;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37" Margin="0,0,10,0" Click="OnCurrencyDecrementerClicked"/>
+                    <TextBlock x:Name="_txtPlatinumCount" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" FontSize="30" Margin="0,0,0,5"/>
+                    <RepeatButton x:Name="_btnPlatinumIncrementer" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE76C;" Margin="10,0,0,0" Click="OnCurrencyIncrementerClicked"/>
+                </StackPanel>
+            </Grid>
+
+            <!--Grid grouping for the current and max weight TextBox Controls-->
+            <Grid Grid.Column="2" Grid.Row="1" Margin="0,10,0,0" Height="190" VerticalAlignment="Top" RequestedTheme="Dark" BorderBrush="#FF7A7A7A" BorderThickness="2" CornerRadius="5">
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="74*"/>
+                </Grid.RowDefinitions>
+
+                <!--TextBoxes for Current and Max Weight-->
+                <TextBox x:Name="_txtBxCurrWeight" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RequestedTheme="Dark" ToolTipService.ToolTip="This is the weight of all your current gear" Header="Current Weight:" FontSize="18" Margin="10,0,15,0"/>
+                <TextBox x:Name="_txtBxMaxWeight" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RequestedTheme="Dark" ToolTipService.ToolTip="This is the max carry weight of your character" Header="Max Weight:" FontSize="18" Grid.Row="1" Margin="10,0,15,0"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

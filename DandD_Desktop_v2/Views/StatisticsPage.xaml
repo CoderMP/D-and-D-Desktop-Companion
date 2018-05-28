@@ -9,8 +9,10 @@
     <Grid
         x:Name="ContentArea"
         Margin="{StaticResource MediumLeftRightMargin}">
-        <Grid
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/ViewBackgrounds/fire-dragon-wallpapers-desktop-background.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
             <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.-->
         </Grid>

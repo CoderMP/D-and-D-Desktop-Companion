@@ -9,10 +9,27 @@
     <Grid
         x:Name="ContentArea"
         Margin="{StaticResource MediumLeftRightMargin}">
-        <Grid
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                Place your content here.-->
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/ViewBackgrounds/dungeons-and-dragons-wallpaper-HD1-1.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="_txtBxPersTraits" TextWrapping="Wrap" Text="" RequestedTheme="Dark" FontSize="18" Header="Personality Traits" Margin="0,0,20,20" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            <TextBox x:Name="_txtBxIdeals" Grid.Column="1" TextWrapping="Wrap" Text="" RequestedTheme="Dark" FontSize="18" Header="Ideals" Margin="0,0,20,20" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            <TextBox x:Name="_txtBxProfAndLang" Grid.Column="2" TextWrapping="Wrap" Text="" RequestedTheme="Dark" FontSize="18" Header="Proficiencies &amp; Languages" Margin="0,0,20,20" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            <TextBox x:Name="_txtBxBonds" Grid.Row="1" TextWrapping="Wrap" Text="" RequestedTheme="Dark" FontSize="18" Header="Bonds" Margin="0,0,20,20" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            <TextBox x:Name="_txtBxFlaws" Grid.Column="1" Grid.Row="1"  TextWrapping="Wrap" Text="" RequestedTheme="Dark" FontSize="18" Header="Flaws" Margin="0,0,20,20" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            <TextBox x:Name="_txtBxFeatsAndTraits" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="" RequestedTheme="Dark" FontSize="18" Header="Features &amp; Traits" Margin="0,0,20,20" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </Grid>
     </Grid>
 </Page>

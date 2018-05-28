@@ -22,13 +22,13 @@
             Or to use an IconElement instead of a Symbol see https://github.com/Microsoft/WindowsTemplateStudio/blob/master/docs/projectTypes/navigationpane.md
             Edit String/en-US/Resources.resw: Add a menu item title for each page
             -->
-            <NavigationViewItem x:Uid="Shell_Dashboard" Icon="Document" helpers:NavHelper.NavigateTo="views:DashboardPage" />
-            <NavigationViewItem x:Uid="Shell_Statistics" Icon="Document" helpers:NavHelper.NavigateTo="views:StatisticsPage" />
-            <NavigationViewItem x:Uid="Shell_Biography" Icon="Document" helpers:NavHelper.NavigateTo="views:BiographyPage" />
-            <NavigationViewItem x:Uid="Shell_Spells" Icon="Document" helpers:NavHelper.NavigateTo="views:SpellsPage" />
-            <NavigationViewItem x:Uid="Shell_Inventory" Icon="Document" helpers:NavHelper.NavigateTo="views:InventoryPage" />
-            <NavigationViewItem x:Uid="Shell_Codex" Icon="Document" helpers:NavHelper.NavigateTo="views:CodexPage" />
-            <NavigationViewItem x:Uid="Shell_DMConsole" Icon="Document" helpers:NavHelper.NavigateTo="views:DMConsolePage" />
+            <NavigationViewItem x:Uid="Shell_Dashboard" Icon="Contact" helpers:NavHelper.NavigateTo="views:DashboardPage" ToolTipService.ToolTip="Dashboard" ToolTipService.Placement="Right"/>
+            <NavigationViewItem x:Uid="Shell_Statistics" Icon="ContactInfo" helpers:NavHelper.NavigateTo="views:StatisticsPage" ToolTipService.ToolTip="Statistics" ToolTipService.Placement="Right"/>
+            <NavigationViewItem x:Uid="Shell_Biography" Icon="ShowResults" helpers:NavHelper.NavigateTo="views:BiographyPage" ToolTipService.ToolTip="Biography" ToolTipService.Placement="Right"/>
+            <NavigationViewItem x:Uid="Shell_Spells" Icon="AllApps" helpers:NavHelper.NavigateTo="views:SpellsPage" ToolTipService.ToolTip="Spells" ToolTipService.Placement="Right"/>
+            <NavigationViewItem x:Uid="Shell_Inventory" Icon="Shop" helpers:NavHelper.NavigateTo="views:InventoryPage" ToolTipService.ToolTip="Inventory" ToolTipService.Placement="Right"/>
+            <NavigationViewItem x:Uid="Shell_Codex" Icon="Library" helpers:NavHelper.NavigateTo="views:CodexPage" ToolTipService.ToolTip="Codex" ToolTipService.Placement="Right"/>
+            <NavigationViewItem x:Uid="Shell_DMConsole" Icon="PreviewLink" helpers:NavHelper.NavigateTo="views:DMConsolePage" ToolTipService.ToolTip="DM Console" ToolTipService.Placement="Right"/>
         </NavigationView.MenuItems>
         <NavigationView.HeaderTemplate>
             <DataTemplate>

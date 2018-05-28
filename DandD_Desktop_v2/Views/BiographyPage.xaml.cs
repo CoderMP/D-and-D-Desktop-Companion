@@ -1,8 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
+using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 namespace DandD_Desktop_v2.Views
 {
@@ -11,6 +12,12 @@ namespace DandD_Desktop_v2.Views
         public BiographyPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SystemNavigationManager navMgr = SystemNavigationManager.GetForCurrentView();
+            navMgr.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

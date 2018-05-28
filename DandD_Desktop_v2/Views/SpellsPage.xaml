@@ -9,10 +9,328 @@
     <Grid
         x:Name="ContentArea"
         Margin="{StaticResource MediumLeftRightMargin}">
-        <Grid
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                Place your content here.-->
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/ViewBackgrounds/G33Yxbq.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <!--TextBox Definitions for spell total, spell save, and spell attack bonus-->
+            <TextBox x:Name="_txtBxTotalSpells" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" Header="Prepared Spells Total:" RequestedTheme="Dark" Width="145" Grid.Column="1" Margin="0,0,0,8"/>
+            <TextBox x:Name="_txtBxSpellSaveDC" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" Header="Spell Save DC:" RequestedTheme="Dark" Width="96" Grid.ColumnSpan="2" Grid.Column="1" Margin="0,0,0,8"/>
+            <TextBox x:Name="_txtBxSpellAtkBonus" HorizontalAlignment="Right" TextWrapping="Wrap" Text="" Header="Spell Attack Bonus:" RequestedTheme="Dark" Width="126" Grid.Column="2" Margin="0,0,0,8"/>
+
+            <!--TextBox Definitions for Cantrips and spells Levels 1-9-->
+            <TextBox x:Name="_txtBxCantrips" Grid.Row="1" TextWrapping="Wrap" Text="" AcceptsReturn="True" RequestedTheme="Dark" Header="Cantrips:" Margin="0,0,10,5" ScrollViewer.VerticalScrollBarVisibility="Visible" ToolTipService.ToolTip="You list of Cantrip Spells goes here!"/>
+            <TextBox x:Name="_txtBxLvl1Spells" Grid.Row="1" TextWrapping="Wrap" Text="" RequestedTheme="Dark" Header="Level 1 Spells:" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,0,10,5" Grid.Column="1" ToolTipService.ToolTip="Your Level 1 Spells go here!"/>
+            <TextBox x:Name="_txtBxLvl2Spells" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="" AcceptsReturn="True" Header="Level 2 Spells:" RequestedTheme="Dark" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,0,10,5" ToolTipService.ToolTip="Your Level 2 Spells go here!"/>
+            <TextBox x:Name="_txtBxLvl3Spells" Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" Text="" Header="Level 3 Spells:" RequestedTheme="Dark" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,0,10,5" ToolTipService.ToolTip="Your Level 3 Spells go here!"/>
+            <TextBox x:Name="_txtBxLvl4Spells" Grid.Row="2" TextWrapping="Wrap" Text="" ScrollViewer.VerticalScrollBarVisibility="Visible" AcceptsReturn="True" Header="Level 4 Spells:" RequestedTheme="Dark" Margin="0,0,10,5" ToolTipService.ToolTip="Your Level 4 Spells go here!"/>
+            <TextBox x:Name="_txtBxLvl5Spells" Grid.Row="2" TextWrapping="Wrap" Text="" RequestedTheme="Dark" Header="Level 5 Spells:" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,0,10,5" AcceptsReturn="True" Grid.Column="1" ToolTipService.ToolTip="Your Level 5 Spells go here!"/>
+            <TextBox x:Name="_txtBxLvl6Spells" Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" Text="" Header="Level 6 Spells:" RequestedTheme="Dark" Margin="0,0,10,5" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ToolTipService.ToolTip="Your Level 6 Spells go here!"/>
+            <TextBox x:Name="_txtBxLvl7Spells" Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" Text="" Header="Level 7 Spells:" RequestedTheme="Dark" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,0,10,5" ToolTipService.ToolTip="Your Level 7 Spells go here!"/>
+            <TextBox x:Name="_txtBxLvl8Spells" Grid.Column="1" Grid.Row="3" TextWrapping="Wrap" Text="" Header="Level 8 Spells:" RequestedTheme="Dark" AcceptsReturn="True" Margin="0,0,10,5" ScrollViewer.VerticalScrollBarVisibility="Visible" ToolTipService.ToolTip="Your Level 8 Spells go here!"/>
+            <TextBox x:Name="_txtBxLvl9Spells" Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" Text="" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" RequestedTheme="Dark" Header="Level 9 Spells:" Margin="0,0,10,5" ToolTipService.ToolTip="Your Level 9 Spells go here!"/>
+
+            <!--CheckBox Controls for Level 1 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl1SpellSlot1" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="90,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="chkBxLvl1SpellSlot2" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="110,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="chkBxLvl1SpellSlot3" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="130,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="chkBxLvl1SpellSlot4" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="150,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="chkBxLvl1SpellSlot5" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="170,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="chkBxLvl1SpellSlot6" Content=":Available Slots" Grid.Column="1" HorizontalAlignment="Left" Margin="189,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Width="134" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+
+            <!--CheckBox Controls for Level 2 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl2SpellSlot1" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="90,-3,0,0" Grid.Row="1" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl2SpellSlot2" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="110,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl2SpellSlot3" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="130,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl2SpellSlot4" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="150,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl2SpellSlot5" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="170,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl2SpellSlot6" Content=":Available Slots" Grid.Column="2" HorizontalAlignment="Left" Margin="190,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+
+            <!--CheckBox Controls for Level 3 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl3SpellSlot1" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="90,-3,0,0" Grid.Row="1" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl3SpellSlot2" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="110,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl3SpellSlot3" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="130,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl3SpellSlot4" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="150,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl3SpellSlot5" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="170,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl3SpellSlot6" Content=":Available Slots" Grid.Column="3" HorizontalAlignment="Left" Margin="190,-3,0,0" VerticalAlignment="Top" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+
+            <!--CheckBox Controls for Level 4 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl4SpellSlot1" Content="" HorizontalAlignment="Left" Margin="90,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl4SpellSlot2" Content="" HorizontalAlignment="Left" Margin="110,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl4SpellSlot3" Content="" HorizontalAlignment="Left" Margin="130,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl4SpellSlot4" Content="" HorizontalAlignment="Left" Margin="150,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl4SpellSlot5" Content="" HorizontalAlignment="Left" Margin="170,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl4SpellSlot6" Content=":Available Slots" HorizontalAlignment="Left" Margin="190,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+
+            <!--CheckBox Controls for Level 5 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl5SpellSlot1" Content="" HorizontalAlignment="Left" Margin="90,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl5SpellSlot2" Content="" HorizontalAlignment="Left" Margin="110,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl5SpellSlot3" Content="" HorizontalAlignment="Left" Margin="130,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl5SpellSlot4" Content="" HorizontalAlignment="Left" Margin="150,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl5SpellSlot5" Content="" HorizontalAlignment="Left" Margin="170,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl5SpellSlot6" Content=":Available Slots" HorizontalAlignment="Left" Margin="190,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+
+            <!--CheckBox Controls for Level 6 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl6SpellSlot1" Content="" HorizontalAlignment="Left" Margin="90,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl6SpellSlot2" Content="" HorizontalAlignment="Left" Margin="110,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl6SpellSlot3" Content="" HorizontalAlignment="Left" Margin="130,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl6SpellSlot4" Content="" HorizontalAlignment="Left" Margin="150,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl6SpellSlot5" Content="" HorizontalAlignment="Left" Margin="170,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl6SpellSlot6" Content=":Available Slots" HorizontalAlignment="Left" Margin="190,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+
+            <!--CheckBox Controls for Level 7 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl7SpellSlot1" Content="" HorizontalAlignment="Left" Margin="90,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="3">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl7SpellSlot2" Content="" HorizontalAlignment="Left" Margin="110,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="3">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl7SpellSlot3" Content="" HorizontalAlignment="Left" Margin="130,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="3">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl7SpellSlot4" Content="" HorizontalAlignment="Left" Margin="150,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="3">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl7SpellSlot5" Content="" HorizontalAlignment="Left" Margin="170,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="3">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl7SpellSlot6" Content=":Available Slots" HorizontalAlignment="Left" Margin="190,-3,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="3">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+
+            <!--CheckBox Controls for Level 8 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl8SpellSlot1" Content="" HorizontalAlignment="Left" Margin="90,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl8SpellSlot2" Content="" HorizontalAlignment="Left" Margin="110,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl8SpellSlot3" Content="" HorizontalAlignment="Left" Margin="130,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl8SpellSlot4" Content="" HorizontalAlignment="Left" Margin="150,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl8SpellSlot5" Content="" HorizontalAlignment="Left" Margin="170,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl8SpellSlot6" Content=":Available Slots" HorizontalAlignment="Left" Margin="190,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="1">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+
+            <!--CheckBox Controls for Level 9 Spell Slots-->
+            <CheckBox x:Name="_chkBxLvl9SpellSlot1" Content="" HorizontalAlignment="Left" Margin="90,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl9SpellSlot2" Content="" HorizontalAlignment="Left" Margin="110,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl9SpellSlot3" Content="" HorizontalAlignment="Left" Margin="130,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl9SpellSlot4" Content="" HorizontalAlignment="Left" Margin="150,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl9SpellSlot5" Content="" HorizontalAlignment="Left" Margin="170,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <CheckBox x:Name="_chkBxLvl9SpellSlot6" Content=":Available Slots" HorizontalAlignment="Left" Margin="190,-3,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RequestedTheme="Dark" Grid.Column="2">
+                <CheckBox.RenderTransform>
+                    <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+                </CheckBox.RenderTransform>
+            </CheckBox>
         </Grid>
     </Grid>
 </Page>
