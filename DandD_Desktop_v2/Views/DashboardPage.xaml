@@ -35,13 +35,13 @@
             </Grid.RowDefinitions>
 
             <!--Player Name Textbox-->
-            <TextBox x:Name="_txtPlayerName" VerticalAlignment="Top" HorizontalAlignment="Left" PlaceholderText="Enter Player Name" Header="Player Name:" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0,0,0" Width="211"/>
+            <TextBox x:Name="_txtPlayerName" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Enter Player Name" Header="Player Name:" TextAlignment="Center" FontSize="18" Margin="5,0,5,0"/>
 
             <!--Character Name TextBox-->
-            <TextBox x:Name="_txtCharName" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" PlaceholderText="Enter Character Name" Header="Character Name:" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0.5,0,0" Width="211"/>
+            <TextBox x:Name="_txtCharName" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Enter Character Name" Header="Character Name:" TextAlignment="Center" FontSize="18" Margin="5,0,5,0"/>
 
             <!--Character Alignment Spinner-->
-            <ComboBox x:Name="_cmbAlignment" VerticalAlignment="Top" HorizontalAlignment="Left" PlaceholderText="Alignment" Header="Character Alignment:" Grid.Row="2" HorizontalContentAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0,0,0" Width="211">
+            <ComboBox x:Name="_cmbAlignment" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Alignment" Header="Character Alignment:" Grid.Row="2" HorizontalContentAlignment="Center" FontSize="18"  Margin="5,0,5,0">
                 <ComboBoxItem Content="Lawful Good" FontFamily="Segoe"/>
                 <ComboBoxItem Content="Neutral Good" FontFamily="Segoe"/>
                 <ComboBoxItem Content="Chaotic Good" FontFamily="Segoe"/>
@@ -54,7 +54,7 @@
             </ComboBox>
 
             <!--Character Class Spinner-->
-            <ComboBox x:Name="_cmbCharClass" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Class" Header="Character Class:" HorizontalContentAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5.5,0,9,0">
+            <ComboBox x:Name="_cmbCharClass" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Class" Header="Character Class:" HorizontalContentAlignment="Center" FontSize="18" Margin="5,0,5,0">
                 <ComboBoxItem Content="Barbarian" FontFamily="Segoe"/>
                 <ComboBoxItem Content="Bard" FontFamily="Segoe"/>
                 <ComboBoxItem Content="Blood Hunter" FontFamily="Segoe"/>
@@ -71,7 +71,7 @@
             </ComboBox>
 
             <!--Character Race Spinner-->
-            <ComboBox x:Name="_cmbCharRace" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Race" Header="Chracter Race" HorizontalContentAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0.5,0.5,9,0">
+            <ComboBox x:Name="_cmbCharRace" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Race" Header="Chracter Race" HorizontalContentAlignment="Center" FontSize="18" Margin="5,0,5,0">
                 <ComboBoxItem Content="Aarakocra" FontFamily="Segoe"/>
                 <ComboBoxItem Content="Aasimar" FontFamily="Segoe"/>
                 <ComboBoxItem Content="BugBear" FontFamily="Segoe"/>
@@ -101,7 +101,7 @@
             </ComboBox>
 
             <!--Character Background Spinner-->
-            <ComboBox x:Name="_cmbCharBackground" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Background" Header="Character Background" HorizontalContentAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5.5,0,9,0">
+            <ComboBox x:Name="_cmbCharBackground" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="Background" Header="Character Background" HorizontalContentAlignment="Center" FontSize="18" Margin="5,0,5,0">
                 <ComboBoxItem Content="Acolyte" FontFamily="Segoe"/>
                 <ComboBoxItem Content="Anthropologist" FontFamily="Segoe"/>
                 <ComboBoxItem Content="Archeologist" FontFamily="Segoe"/>
@@ -135,19 +135,19 @@
             </ComboBox>
 
             <!--Character Armour Rating Textbox-->
-            <TextBox x:Name="_txtBxArmRating" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" PlaceholderText="AR" Header="Armour Rating" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0,0,10,0" Width="99"/>
+            <TextBox x:Name="_txtBxArmRating" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="AR" Header="Armour Rating" TextAlignment="Center" FontSize="18" Margin="5,0,5,0"/>
 
             <!--Character Initiative-->
-            <TextBox x:Name="_txtBxInitiative" Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Right" PlaceholderText="+X" Header="Initiative" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0,0,10,0" Width="99"/>
+            <TextBox x:Name="_txtBxInitiative" Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="+X" Header="Initiative" TextAlignment="Center" FontSize="18" Margin="5,0,5,0"/>
 
             <!--Character Health (Current)-->
-            <TextBox x:Name="_txtBxCurrHp" Grid.Column="2" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" PlaceholderText="XX" Header="Current HP" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0,0.5,10,0" Width="99"/>
+            <TextBox x:Name="_txtBxCurrHp" Grid.Column="2" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="XX" Header="Current HP" TextAlignment="Center" FontSize="18" Margin="5,0,5,0"/>
 
             <!--Character Health (Max)-->
-            <TextBox x:Name="_txtBxMaxHp" Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" PlaceholderText="XX" Header="Max HP" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="0,0.5,10,0" Width="99"/>
+            <TextBox x:Name="_txtBxMaxHp" Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="XX" Header="Max HP" TextAlignment="Center" FontSize="18"  Margin="5,0,5,0"/>
 
             <!--Character XP-->
-            <TextBox x:Name="_txtBxXP" Grid.Column="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="+XX" Header="XP" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0,10,0"/>
+            <TextBox x:Name="_txtBxXP" Grid.Column="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="+XX" Header="XP" TextAlignment="Center" FontSize="18" Margin="5,0,5,0"/>
 
             <!--Character Level Label-->
             <Border Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" BorderBrush="#FF7A7A7A" BorderThickness="2" Margin="0,33,0,0" HorizontalAlignment="Center" Width="104">
@@ -155,10 +155,10 @@
             </Border>
 
             <!--Character Hit Dice-->
-            <TextBox x:Name="_txtBxHitDice" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Left" PlaceholderText="XDXX" Header="Hit Dice" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0,0,0" Width="99"/>
+            <TextBox x:Name="_txtBxHitDice" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="XDXX" Header="Hit Dice" TextAlignment="Center" FontSize="18" Margin="5,0,5,0"/>
 
             <!--Character Speed-->
-            <TextBox x:Name="_txtBxSpeed" Grid.Column="4" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="XXft." Header="Speed" TextAlignment="Center" FontSize="18" RequestedTheme="Dark" Margin="5,0.5,9.5,0"/>
+            <TextBox x:Name="_txtBxSpeed" Grid.Column="4" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" PlaceholderText="XXft." Header="Speed" TextAlignment="Center" FontSize="18" Margin="5,0,5,0"/>
 
             <!--Player Death Roll Successes-->
             <Grid Grid.Column="5" Margin="0.5,5,455,9.5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
@@ -300,7 +300,23 @@
             </Grid>
 
             <!--Player Notes Textbox-->
-            <TextBox x:Name="_txtBxPlayerNotes" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="5" TextWrapping="Wrap" Header="Player Notes:" RequestedTheme="Dark" Margin="5,0,10,0" FontSize="18" ScrollViewer.VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+            <TextBox x:Name="_txtBxPlayerNotes" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="5" TextWrapping="Wrap" Header="Player Notes:" Margin="5,0,5,0" FontSize="18" ScrollViewer.VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+
+            <!--Info TextBlock-->
+            <Border Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="4" BorderBrush="White" BorderThickness="2" CornerRadius="5" Margin="5,0,5,0">
+                <Grid RequestedTheme="Dark">
+                    <Grid.Background>
+                        <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                    </Grid.Background>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Stretch" TextAlignment="Center" FontFamily="Segoe" FontSize="18" Text="General Information"/>
+                    <TextBlock x:Name="_txtCharAlignment" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" TextAlignment="Center" TextWrapping="Wrap" Text=""/>
+                </Grid>
+            </Border>
         </Grid>
     </Grid>
 </Page>
