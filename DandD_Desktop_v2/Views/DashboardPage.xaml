@@ -314,7 +314,7 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBlock VerticalAlignment="Top" HorizontalAlignment="Stretch" TextAlignment="Center" FontFamily="Segoe" FontSize="18" Text="General Information"/>
-                    <TextBlock x:Name="_txtCharAlignment" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" TextAlignment="Center" TextWrapping="Wrap" Text=""/>
+                    <TextBlock x:Name="_txtCharInfo" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" TextAlignment="Center" TextWrapping="Wrap" Text=""/>
                 </Grid>
             </Border>
         </Grid>
