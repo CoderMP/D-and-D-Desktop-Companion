@@ -13,8 +13,115 @@
             <Grid.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/ViewBackgrounds/fire-dragon-wallpapers-desktop-background.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
-            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                Place your content here.-->
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--Strength-->
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderBrush="White" BorderThickness="2" CornerRadius="5" Margin="15,15,15,0">
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <TextBox x:Name="_txtBxStr" VerticalAlignment="Center" HorizontalAlignment="Center" PlaceholderText="STR" TextAlignment="Center" FontSize="24" Margin="10,10,10,10"/>
+                <CheckBox x:Name="_chkBxStrSavingThrow" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Saving Throw" FontSize="24" Margin="10,0,9,0"/>
+                <CheckBox x:Name="_chkBxStrAthletics" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Athletics" FontSize="24" Margin="10,0,0,0"/>
+                <TextBlock x:Name="_txtStrMod" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="-5" TextAlignment="Center" FontSize="32" Margin="10,0,10,0"/>
+                <TextBlock Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="Strength" TextAlignment="Center" FontSize="28"/>
+            </Grid>
+
+            <!--Constitution-->
+            <Grid Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderBrush="White" BorderThickness="2" CornerRadius="5" Margin="15,15,15,0">
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="_txtBxConstitution" VerticalAlignment="Center" HorizontalAlignment="Center" PlaceholderText="CONST" TextAlignment="Center" FontSize="24" Margin="10,10,10,10"/>
+                <CheckBox x:Name="_txtBxConstSavingThrow" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Saving Throw" FontSize="24" Margin="10,0,10,0"/>
+                <TextBlock x:Name="_txtConstMod" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="-5" FontSize="32" TextAlignment="Center" Margin="10,0,10,0"/>
+                <TextBlock Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="Constitution" TextAlignment="Center" FontSize="28"/>
+            </Grid>
+
+            <!--Dexterity-->
+            <Grid Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderBrush="White" BorderThickness="2" CornerRadius="5" Margin="15,15,15,0">
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBox x:Name="_txtBxDexterity" VerticalAlignment="Center" HorizontalAlignment="Center" PlaceholderText="DEX" TextAlignment="Center" FontSize="24" Margin="10,10,10,10"/>
+                <CheckBox x:Name="_chkBxDexSavingThrow" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Saving Throw" FontSize="24" Margin="10,0,10,0"/>
+                <CheckBox x:Name="_chkBxDexAcrobatics" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Acrobatics" FontSize="24" Margin="10,0,0,0"/>
+                <CheckBox x:Name="_chkBxDexSleightOfHand" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Sleight of Hand" FontSize="24" Margin="10,0,0,0"/>
+                <CheckBox x:Name="_chkBxDexStealth" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Stealth" FontSize="24" Margin="10,0,0,0"/>
+                <TextBlock x:Name="_txtDexMod" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="-5" FontSize="28" Margin="10,0,10,0"/>
+                <TextBlock Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="Dexterity" TextAlignment="Center" FontSize="28"/>
+            </Grid>
+
+            <!--Charisma-->
+            <Grid Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderBrush="White" BorderThickness="2" CornerRadius="5" Margin="15,15,15,0">
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBox x:Name="_txtCharisma" VerticalAlignment="Center" HorizontalAlignment="Center" PlaceholderText="CHAR" TextAlignment="Center" FontSize="24" Margin="10,10,10,10"/>
+                <CheckBox x:Name="_chkBxCharDeception" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Deception" FontSize="24" Margin="10,0,0,0"/>
+                <CheckBox x:Name="_chkBxCharSavingThrow" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Saving Throw" FontSize="24" Margin="10,0,0,0"/>
+                <CheckBox x:Name="_chkBxCharPersuasion" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Persuasion" FontSize="24" Margin="10,0,0,0"/>
+                <CheckBox x:Name="_chkBxCharIntimidation" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Intimidation" FontSize="24" Margin="10,0,0,0"/>
+                <CheckBox x:Name="_chkBxCharPerformance" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Performance" FontSize="24" Margin="10,0,0,0"/>
+                <TextBlock x:Name="_txtCharMod" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Text="-5" FontSize="28" Margin="10,0,10,0"/>
+                <TextBlock Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" TextAlignment="Center" Text="Charisma" FontSize="28"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
