@@ -146,11 +146,11 @@
     <comment>Navigation view item name for Inventory</comment>
   </data>
   <data name="Codex_PivotItem1.Header" xml:space="preserve">
-    <value>Item 1</value>
+    <value>Races - Player</value>
     <comment>First Pivot item title for Codex</comment>
   </data>
   <data name="Codex_PivotItem2.Header" xml:space="preserve">
-    <value>Item 2</value>
+    <value>Races - Enemies</value>
     <comment>Second Pivot item title for Codex</comment>
   </data>
   <data name="Shell_Codex.Content" xml:space="preserve">
@@ -190,15 +190,21 @@
     <comment>About this application title for Settings</comment>
   </data>
   <data name="Settings_AboutDescription.Text" xml:space="preserve">
-    <value>Settings page placeholder text.  Your app description goes here.</value>
+    <value>Thanks for using my D&amp;D Desktop Companion! 
+
+Any feedback is welcome at my repo forum!
+
+I do have an MIT License on this project, so if you do repurpose my application in any way, all I ask is that you just give credit where credit's due. 
+
+Thanks and I hope you enjoy!</value>
     <comment>About this application description for Settings</comment>
   </data>
   <data name="Settings_PrivacyTermsLink.Content" xml:space="preserve">
-    <value>Privacy Statement</value>
+    <value>Privacy Statement &amp; Forum Link</value>
     <comment>Privacy Statement link content for Settings</comment>
   </data>
   <data name="Settings_PrivacyTermsLink.NavigateUri" xml:space="preserve">
-    <value>https://YourPrivacyUrlGoesHere/</value>
+    <value>https://github.com/CoderMP/D-and-D-Desktop-Companion/issues</value>
     <comment>Here is your Privacy Statement url for Settings</comment>
   </data>
   <data name="Settings_Personalization.Text" xml:space="preserve">
@@ -249,5 +255,25 @@ Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Ma
   <data name="AfterUpdate_Title.Text" xml:space="preserve">
     <value>What's new in this version</value>
     <comment>What's new prompt message title</comment>
+  </data>
+  <data name="Codex_PivotItem3.Header" xml:space="preserve">
+    <value>Classes</value>
+    <comment>Third Pivot item title for Codex</comment>
+  </data>
+  <data name="Codex_PivotItem4.Header" xml:space="preserve">
+    <value>Backgrounds</value>
+    <comment>Fourth Pivot item title for Codex</comment>
+  </data>
+  <data name="Codex_PivotItem5.Header" xml:space="preserve">
+    <value>Spells</value>
+    <comment>Fifth Pivot item title for Codex</comment>
+  </data>
+  <data name="Codex_PivotItem6.Header" xml:space="preserve">
+    <value>Gear</value>
+    <comment>Sixth Pivot item title for Codex</comment>
+  </data>
+  <data name="Codex_PivotItem7.Header" xml:space="preserve">
+    <value>Languages</value>
+    <comment>Seventh Pivot item title for Codex</comment>
   </data>
 </root>

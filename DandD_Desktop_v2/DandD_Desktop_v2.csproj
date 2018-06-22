@@ -259,6 +259,18 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assets\ClassSigils\barbarian-sigil.png" />
+    <Content Include="Assets\ClassSigils\bard-sigil.png" />
+    <Content Include="Assets\ClassSigils\cleric-sigil.png" />
+    <Content Include="Assets\ClassSigils\druid-sigil.png" />
+    <Content Include="Assets\ClassSigils\fighter-sigil.png" />
+    <Content Include="Assets\ClassSigils\monk-sigil.png" />
+    <Content Include="Assets\ClassSigils\paladin-sigil.png" />
+    <Content Include="Assets\ClassSigils\ranger-sigil.png" />
+    <Content Include="Assets\ClassSigils\rogue-sigil.png" />
+    <Content Include="Assets\ClassSigils\sorcerer-sigil.png" />
+    <Content Include="Assets\ClassSigils\warlock-sigil.png" />
+    <Content Include="Assets\ClassSigils\wizard-sigil.png" />
     <Content Include="Assets\ViewBackgrounds\03_new-to-dnd_races_heroes_her.png" />
     <Content Include="Assets\ViewBackgrounds\0b4eb2dc4b8b8c66165690d3a6723a9b.jpg" />
     <Content Include="Assets\ViewBackgrounds\cbdeb20be7680154b9ae6feaa017012e.jpg" />
