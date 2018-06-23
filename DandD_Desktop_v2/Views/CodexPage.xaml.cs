@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DandD_Desktop_v2.Views.CodexInfoPages;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Windows.UI.Core;
@@ -38,7 +39,10 @@ namespace DandD_Desktop_v2.Views
 
         private void OnClassButtonClicked(object sender, RoutedEventArgs e)
         {
-
+            if (sender == _btnBarbarianClass)
+            {
+                this.Frame.Navigate(typeof(BarbarianCodexPage));
+            }
         }
     }
 }

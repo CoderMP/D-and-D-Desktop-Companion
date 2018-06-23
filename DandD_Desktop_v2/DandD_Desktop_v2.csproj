@@ -134,6 +134,9 @@
     <Compile Include="Views\BiographyPage.xaml.cs">
       <DependentUpon>BiographyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CodexInfoPages\BarbarianCodexPage.xaml.cs">
+      <DependentUpon>BarbarianCodexPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CodexPage.xaml.cs">
       <DependentUpon>CodexPage.xaml</DependentUpon>
     </Compile>
@@ -203,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\CodexInfoPages\BarbarianCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CodexPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -259,6 +266,18 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assets\ClassAvatars\Barbarian.png" />
+    <Content Include="Assets\ClassAvatars\Bard.png" />
+    <Content Include="Assets\ClassAvatars\Cleric.png" />
+    <Content Include="Assets\ClassAvatars\Druid.png" />
+    <Content Include="Assets\ClassAvatars\Fighter.png" />
+    <Content Include="Assets\ClassAvatars\Monk.png" />
+    <Content Include="Assets\ClassAvatars\Paladin.png" />
+    <Content Include="Assets\ClassAvatars\Ranger.png" />
+    <Content Include="Assets\ClassAvatars\Rogue.png" />
+    <Content Include="Assets\ClassAvatars\Sorcerer.png" />
+    <Content Include="Assets\ClassAvatars\Warlock.png" />
+    <Content Include="Assets\ClassAvatars\Wizard.png" />
     <Content Include="Assets\ClassSigils\barbarian-sigil.png" />
     <Content Include="Assets\ClassSigils\bard-sigil.png" />
     <Content Include="Assets\ClassSigils\cleric-sigil.png" />
