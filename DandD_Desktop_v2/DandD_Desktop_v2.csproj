@@ -137,6 +137,39 @@
     <Compile Include="Views\CodexInfoPages\BarbarianCodexPage.xaml.cs">
       <DependentUpon>BarbarianCodexPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CodexInfoPages\BardCodexPage.xaml.cs">
+      <DependentUpon>BardCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\ClericCodexPage.xaml.cs">
+      <DependentUpon>ClericCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\DruidCodexPage.xaml.cs">
+      <DependentUpon>DruidCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\FighterCodexPage.xaml.cs">
+      <DependentUpon>FighterCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\MonkCodexPage.xaml.cs">
+      <DependentUpon>MonkCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\PaladinCodexPage.xaml.cs">
+      <DependentUpon>PaladinCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\RangerCodexPage.xaml.cs">
+      <DependentUpon>RangerCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\RogueCodexPage.xaml.cs">
+      <DependentUpon>RogueCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\SorcererCodexPage.xaml.cs">
+      <DependentUpon>SorcererCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\WarlockCodexPage.xaml.cs">
+      <DependentUpon>WarlockCodexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CodexInfoPages\WizardCodexPage.xaml.cs">
+      <DependentUpon>WizardCodexPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CodexPage.xaml.cs">
       <DependentUpon>CodexPage.xaml</DependentUpon>
     </Compile>
@@ -207,6 +240,50 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\CodexInfoPages\BarbarianCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\BardCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\ClericCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\DruidCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\FighterCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\MonkCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\PaladinCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\RangerCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\RogueCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\SorcererCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\WarlockCodexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CodexInfoPages\WizardCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -290,6 +367,30 @@
     <Content Include="Assets\ClassSigils\sorcerer-sigil.png" />
     <Content Include="Assets\ClassSigils\warlock-sigil.png" />
     <Content Include="Assets\ClassSigils\wizard-sigil.png" />
+    <Content Include="Assets\RaceImgs\aarakocra.png" />
+    <Content Include="Assets\RaceImgs\aasimar.png" />
+    <Content Include="Assets\RaceImgs\bugbear.jpeg" />
+    <Content Include="Assets\RaceImgs\dragonborn.png" />
+    <Content Include="Assets\RaceImgs\dwarf.png" />
+    <Content Include="Assets\RaceImgs\elf.png" />
+    <Content Include="Assets\RaceImgs\feral_tiefling.png" />
+    <Content Include="Assets\RaceImgs\firbolg.jpg" />
+    <Content Include="Assets\RaceImgs\genasi.png" />
+    <Content Include="Assets\RaceImgs\gnome.png" />
+    <Content Include="Assets\RaceImgs\goblin.jpeg" />
+    <Content Include="Assets\RaceImgs\goliath.png" />
+    <Content Include="Assets\RaceImgs\half_elf.png" />
+    <Content Include="Assets\RaceImgs\half_orc.png" />
+    <Content Include="Assets\RaceImgs\hobgoblin.png" />
+    <Content Include="Assets\RaceImgs\human.png" />
+    <Content Include="Assets\RaceImgs\kenku.jpg" />
+    <Content Include="Assets\RaceImgs\kobold.jpeg" />
+    <Content Include="Assets\RaceImgs\lizardfolk.jpg" />
+    <Content Include="Assets\RaceImgs\orc.jpg" />
+    <Content Include="Assets\RaceImgs\tabaxi.jpg" />
+    <Content Include="Assets\RaceImgs\tiefling.png" />
+    <Content Include="Assets\RaceImgs\tortle.png" />
+    <Content Include="Assets\RaceImgs\yu_ti_pureblood.png" />
     <Content Include="Assets\ViewBackgrounds\03_new-to-dnd_races_heroes_her.png" />
     <Content Include="Assets\ViewBackgrounds\0b4eb2dc4b8b8c66165690d3a6723a9b.jpg" />
     <Content Include="Assets\ViewBackgrounds\cbdeb20be7680154b9ae6feaa017012e.jpg" />

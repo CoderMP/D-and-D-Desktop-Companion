@@ -29,12 +29,142 @@
         <Pivot x:Name="Items">
             <!--Player Races-->
             <PivotItem x:Uid="Codex_PivotItem1">
-                <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-                    <!--
-                    The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                    Place your content here.
-                    -->
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/ViewBackgrounds/03_new-to-dnd_races_heroes_her.png"/>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!--Player Races ListView-->
+                    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <Grid.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltMediumColor}"/>
+                        </Grid.Background>
+                        <ListView Width="370" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemClick="OnRaceListItemClick">
+                            <ListViewItem x:Name="_lstAarakocra" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Aarakocra" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstAasimer" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Aasimar" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstBugbear" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Bugbear" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstDragonborn" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Dragonborn" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstDwarf" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Dwarf" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstElf" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Elf" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstFeralTiefling" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Feral Tiefling" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstFirbolg" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Firbolg" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstGenasi" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Genasi" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstGnaome" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Gnome" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstGoblin"  BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Goblin" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstGoliath"  BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Goliath" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstHalfElf" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Half-Elf" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstHalfling" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Halfling" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstHalfOrc" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Half-Orc" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstHobgoblin" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Hobgoblin" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstHuman" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Human" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstKenku"  BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Kenku" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstKobold" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Kobold" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstLizardFolk" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Lizardfolk" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstOrc" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Orc" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstTabaxi"  BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Tabaxi" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstTiefling" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Tiefling" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstTortle" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Tortle" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstTriton" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Triton" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                            <ListViewItem x:Name="_lstYuTiPureblood" BorderBrush="White" BorderThickness="0,0,0,2">
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Center" Text="Yu-Ti Pureblood" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            </ListViewItem>
+                        </ListView>
+                    </Grid>
 
+                    <!--Detail Area-->
+                    <Grid Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <Grid.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltMediumColor}"/>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--Race Sprite Preview-->
+                        <Border Grid.Row="1" Grid.RowSpan="4" BorderBrush="White" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Margin="15,15,15,15">
+                            <Image x:Name="_raceImg" Grid.Row="1"  Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                        </Border>
+
+                        <!--Race Name Control Grouping-->
+                        <Grid Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="Race:" FontSize="30" FontWeight="Bold" TextDecorations="Underline" Margin="15,0,0,0"/>
+                            <TextBlock x:Name="_txtRaceName" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="" FontSize="30" FontWeight="Bold" Margin="15,0,0,0"/>
+                        </Grid>
+
+                        <!--Racial Detail TextBlocks-->
+                        <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="Biography:" FontSize="30" FontWeight="Bold" TextDecorations="Underline" Margin="15,0,0,0"/>
+                        <TextBlock x:Name="_txtRaceBio" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="" FontSize="20" TextWrapping="Wrap" Margin="15,0,0,0"/>
+                        <TextBlock Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="Racial Perks:" FontSize="30" FontWeight="Bold" TextDecorations="Underline" Margin="15,0,0,0"/>
+                        <TextBlock x:Name="_txtRacePerks" Grid.Row="5" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="" FontSize="20" TextWrapping="Wrap" Margin="15,0,0,0"/>
+                    </Grid>
                 </Grid>
             </PivotItem>
 
@@ -66,6 +196,7 @@
                         <ColumnDefinition Width="157*"/>
                     </Grid.ColumnDefinitions>
 
+                    <!--Class Buttons Control Group-->
                     <Grid Grid.Row="1" Grid.Column="1" CornerRadius="5">
                         <Grid.Background>
                             <SolidColorBrush Color="{ThemeResource SystemAltMediumColor}"/>
