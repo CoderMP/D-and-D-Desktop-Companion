@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDisplayName" xml:space="preserve">
-    <value>DandD_Desktop_v2</value>
+    <value>D&amp;D Desktop Companion</value>
     <comment>Application display name</comment>
   </data>
   <data name="AppDescription" xml:space="preserve">
-    <value>DandD_Desktop_v2</value>
+    <value>Digital Player Companion for Dungeons &amp; Dragons 5th Ed. by Wizards of the Coast</value>
     <comment>Application description</comment>
   </data>
   <data name="Shell_Dashboard.Content" xml:space="preserve">

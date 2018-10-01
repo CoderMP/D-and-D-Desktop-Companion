@@ -121,6 +121,7 @@
     <Compile Include="Helpers\Json.cs" />
     <Compile Include="Helpers\NavHelper.cs" />
     <Compile Include="Helpers\SettingsStorageExtensions.cs" />
+    <Compile Include="Models\Character.cs" />
     <Compile Include="Models\SampleOrder.cs" />
     <Compile Include="Services\ActivationService.cs" />
     <Compile Include="Activation\DefaultLaunchActivationHandler.cs" />
@@ -134,40 +135,40 @@
     <Compile Include="Views\BiographyPage.xaml.cs">
       <DependentUpon>BiographyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\BarbarianCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\BarbarianCodexPage.xaml.cs">
       <DependentUpon>BarbarianCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\BardCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\BardCodexPage.xaml.cs">
       <DependentUpon>BardCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\ClericCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\ClericCodexPage.xaml.cs">
       <DependentUpon>ClericCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\DruidCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\DruidCodexPage.xaml.cs">
       <DependentUpon>DruidCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\FighterCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\FighterCodexPage.xaml.cs">
       <DependentUpon>FighterCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\MonkCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\MonkCodexPage.xaml.cs">
       <DependentUpon>MonkCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\PaladinCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\PaladinCodexPage.xaml.cs">
       <DependentUpon>PaladinCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\RangerCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\RangerCodexPage.xaml.cs">
       <DependentUpon>RangerCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\RogueCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\RogueCodexPage.xaml.cs">
       <DependentUpon>RogueCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\SorcererCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\SorcererCodexPage.xaml.cs">
       <DependentUpon>SorcererCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\WarlockCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\WarlockCodexPage.xaml.cs">
       <DependentUpon>WarlockCodexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CodexInfoPages\WizardCodexPage.xaml.cs">
+    <Compile Include="Views\CodexInfoPages\PlayerClasses\WizardCodexPage.xaml.cs">
       <DependentUpon>WizardCodexPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CodexPage.xaml.cs">
@@ -239,51 +240,51 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\CodexInfoPages\BarbarianCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\BarbarianCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\BardCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\BardCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\ClericCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\ClericCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\DruidCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\DruidCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\FighterCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\FighterCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\MonkCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\MonkCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\PaladinCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\PaladinCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\RangerCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\RangerCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\RogueCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\RogueCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\SorcererCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\SorcererCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\WarlockCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\WarlockCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CodexInfoPages\WizardCodexPage.xaml">
+    <Page Include="Views\CodexInfoPages\PlayerClasses\WizardCodexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -341,7 +342,14 @@
     <Compile Include="Helpers\ResourceExtensions.cs" />
     <Compile Include="Helpers\Singleton.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\CodexInfoPages\Arcana\" />
+    <Folder Include="Views\CodexInfoPages\EnemyRaces\" />
+    <Folder Include="Views\CodexInfoPages\PlayerArmour\" />
+    <Folder Include="Views\CodexInfoPages\PlayerEquipment\" />
+    <Folder Include="Views\CodexInfoPages\PlayerRaces\" />
+    <Folder Include="Views\CodexInfoPages\PlayerWeapons\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\ClassAvatars\Barbarian.png" />
     <Content Include="Assets\ClassAvatars\Bard.png" />
@@ -367,6 +375,14 @@
     <Content Include="Assets\ClassSigils\sorcerer-sigil.png" />
     <Content Include="Assets\ClassSigils\warlock-sigil.png" />
     <Content Include="Assets\ClassSigils\wizard-sigil.png" />
+    <Content Include="Assets\MagicSigils\Abjuration.JPG" />
+    <Content Include="Assets\MagicSigils\Conjuration.JPG" />
+    <Content Include="Assets\MagicSigils\Divination.JPG" />
+    <Content Include="Assets\MagicSigils\Enchantment.JPG" />
+    <Content Include="Assets\MagicSigils\Evocation.JPG" />
+    <Content Include="Assets\MagicSigils\Illusion.JPG" />
+    <Content Include="Assets\MagicSigils\Necromancy.JPG" />
+    <Content Include="Assets\MagicSigils\Transmutation.JPG" />
     <Content Include="Assets\RaceImgs\aarakocra.png" />
     <Content Include="Assets\RaceImgs\aasimar.png" />
     <Content Include="Assets\RaceImgs\bugbear.jpeg" />

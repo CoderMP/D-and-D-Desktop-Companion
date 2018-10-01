@@ -73,6 +73,7 @@ namespace DandD_Desktop_v2.Views
 
         private void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
+        #region Event Handler Methods
         /// <summary>
         /// Event Handler method for the Class tab of the CodexPage
         /// </summary>
@@ -242,5 +243,23 @@ namespace DandD_Desktop_v2.Views
 
             }
         }
+
+        /// <summary>
+        /// Event handler method for the Magic Schools tab of the CodexPage
+        /// </summary>
+        /// <param name="sender">The Button that wa clicked/selected</param>
+        /// <param name="e">Default event argument</param>
+        private void OnMagicSchoolButtonClicked(object sender, RoutedEventArgs e)
+        {
+            if (sender == _btnAbjuration) { /*TODO: Navigate*/ }
+            if (sender == _btnConjuration) { /*TODO: Navigate*/ }
+            if (sender == _btnDivination) { /*TODO: Navigate*/ }
+            if (sender == _btnEnchantment) { /*TODO: Navigate*/ }
+            if (sender == _btnEvocation) { /*TODO: Navigate*/ }
+            if (sender == _btnIllusion) { /*TODO: Navigate*/ }
+            if (sender == _btnNecromancy) { /*TODO: Navigate*/ }
+            if (sender == _btnTransmutation) { /*TODO: Navigate*/ }
+        }
+        #endregion
     }
 }

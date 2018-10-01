@@ -37,7 +37,7 @@
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
-                    
+
                     <!--Player Races ListView-->
                     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                         <Grid.Background>
@@ -314,45 +314,196 @@
 
             <!--Backgrounds-->
             <PivotItem x:Uid="Codex_PivotItem4">
-                <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-                    <!--
-                    The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                    Place your content here.
-                    -->
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="ms-appx:///Assets/ViewBackgrounds/Wallpaper_1920x1080.png"/>
+                    </Grid.Background>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100*"/>
+                        <RowDefinition Height="600*"/>
+                        <RowDefinition Height="100*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="600*"/>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Grid.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltMediumColor}"/>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
 
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+
+                        </Grid.ColumnDefinitions>
+                    </Grid>
                 </Grid>
             </PivotItem>
 
             <!--Spells-->
             <PivotItem x:Uid="Codex_PivotItem5">
-                <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-                    <!--
-                    The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                    Place your content here.
-                    -->
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/Assets/ViewBackgrounds/0b4eb2dc4b8b8c66165690d3a6723a9b.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="82*"/>
+                        <RowDefinition Height="507*"/>
+                        <RowDefinition Height="82*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="160*"/>
+                        <ColumnDefinition Width="963*"/>
+                        <ColumnDefinition Width="160*"/>
+                    </Grid.ColumnDefinitions>
 
+                    <!--Class Buttons Control Group-->
+                    <Grid Grid.Row="1" Grid.Column="1" CornerRadius="5">
+                        <Grid.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltMediumColor}"/>
+                        </Grid.Background>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="8*"/>
+                            <RowDefinition Height="8*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <!--Necromancy-->
+                        <Button x:Name="_btnNecromancy" Grid.Row="1" Grid.Column="0" Style="{StaticResource ClassButtonStyle}" Click="OnMagicSchoolButtonClicked">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="120" Height="120" Source="ms-appx:///Assets/MagicSigils/Necromancy.JPG"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Necromancy" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!--Divination-->
+                        <Button x:Name="_btnDivination" Grid.Row="1" Grid.Column="1" Style="{StaticResource ClassButtonStyle}" Click="OnMagicSchoolButtonClicked">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="120" Height="120" Source="ms-appx:///Assets/MagicSigils/Divination.JPG"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Divination" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!--Transmutation-->
+                        <Button x:Name="_btnTransmutation" Grid.Row="1" Grid.Column="2" Style="{StaticResource ClassButtonStyle}" Click="OnMagicSchoolButtonClicked">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="120" Height="120" Source="ms-appx:///Assets/MagicSigils/Transmutation.JPG"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Transmutation" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!--Evocation-->
+                        <Button x:Name="_btnEvocation" Grid.Row="1" Grid.Column="3" Style="{StaticResource ClassButtonStyle}" Click="OnMagicSchoolButtonClicked">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="120" Height="120" Source="ms-appx:///Assets/MagicSigils/Evocation.JPG"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Evocation" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!--Abjuration-->
+                        <Button x:Name="_btnAbjuration" Grid.Row="2" Grid.Column="0" Style="{StaticResource ClassButtonStyle}" Click="OnMagicSchoolButtonClicked">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="120" Height="120" Source="ms-appx:///Assets/MagicSigils/Abjuration.JPG"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Abjuration" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!--Illusion-->
+                        <Button x:Name="_btnIllusion" Grid.Row="2" Grid.Column="1" Style="{StaticResource ClassButtonStyle}" Click="OnMagicSchoolButtonClicked">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="120" Height="120" Source="ms-appx:///Assets/MagicSigils/Illusion.JPG"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Illusion" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!--Conjuration-->
+                        <Button x:Name="_btnConjuration" Grid.Row="2" Grid.Column="2" Style="{StaticResource ClassButtonStyle}" Click="OnMagicSchoolButtonClicked">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="120" Height="120" Source="ms-appx:///Assets/MagicSigils/Conjuration.JPG"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Conjuration" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!--Enchantment-->
+                        <Button x:Name="_btnEnchantment" Grid.Row="2" Grid.Column="3" Style="{StaticResource ClassButtonStyle}" Click="OnMagicSchoolButtonClicked">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="120" Height="120" Source="ms-appx:///Assets/MagicSigils/Enchantment.JPG"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="Enchantment" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
                 </Grid>
             </PivotItem>
 
             <!--Gear-->
             <PivotItem x:Uid="Codex_PivotItem6">
-                <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-                    <!--
-                    The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                    Place your content here.
-                    -->
-
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="ms-appx:///Assets/ViewBackgrounds/smith.jpg"/>
+                    </Grid.Background>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300*"/>
+                        <RowDefinition Height="300*"/>
+                        <RowDefinition Height="300*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80*"/>
+                        <ColumnDefinition Width="300*"/>
+                        <ColumnDefinition Width="80*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Grid.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAltMediumColor}"/>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="4*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <!-- Armour Button -->
+                        <Button x:Name="_btnArmour" Grid.Row="1" Style="{StaticResource ClassButtonStyle}">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="100" Height="100" Source="/Assets/ClassSigils/barbarian-sigil.png"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="Armour" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+                        <!-- Weapons Button -->
+                        <Button x:Name="_btnWeapons" Grid.Row="1" Grid.Column="1" Style="{StaticResource ClassButtonStyle}">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="100" Height="100" Source="/Assets/ClassSigils/wizard-sigil.png"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="Weapons" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+                        <!--Miscellanious Button -->
+                        <Button x:Name="_btnMisc" Grid.Row="1" Grid.Column="2" Style="{StaticResource ClassButtonStyle}">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="100" Height="100" Source="/Assets/ClassSigils/fighter-sigil.png"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="Misc" FontSize="25"/>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
                 </Grid>
             </PivotItem>
 
             <!--Languages-->
             <PivotItem x:Uid="Codex_PivotItem7">
-                <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-                    <!--
-                    The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                    Place your content here.
-                    -->
-
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/Assets/ViewBackgrounds/e5d4752e7c7c11082218ed54e586212c.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
                 </Grid>
             </PivotItem>
         </Pivot>
